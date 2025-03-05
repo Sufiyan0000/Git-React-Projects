@@ -1,13 +1,18 @@
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../ThemeContext";
 
 const Switch = () => {
-    const { theme, toggleTheme } = useTheme();
-    
-    return (
-        <div className="switch" onClick={toggleTheme}>
-            <div className={`switch__circle ${theme === "dark" ? "switch__circle--dark" : ""}`}></div>
-        </div>
-    )
-}
+  const { theme,toggleTheme } = useTheme();
+  return (
+    <label className="switch">
+      <input
+        type="checkbox"
+        checked={theme === "light"}
+        onChange={toggleTheme}
+      />
+      Dark Mode
+      <span className="slider round" />
+    </label>
+  );
+};
 
 export default Switch;
