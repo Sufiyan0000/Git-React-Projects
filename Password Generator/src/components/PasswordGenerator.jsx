@@ -38,7 +38,7 @@ export default function PasswordGenerator(){
 
     return (
         <div>
-            <div className="container">
+            <div className="text-center bg-red-500">
                 <h3>Password Generator</h3>
                 <div>
                     <input type="text"
